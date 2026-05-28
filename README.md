@@ -1,41 +1,68 @@
-# BitDevs NYC
+# Bitdevs interior do estado de São Paulo
 
-Simple Jekyll site for hosting all of the links from meetups past and future.
+Um site simples feito com `jekyll` para hospedar todos o links dos encontros
+passados e futuros.
 
-## Development
+## Desenvolvimento
 
-You'll need [Ruby & Jekyll](https://jekyllrb.com/docs/installation/) to run the
-site locally. Once they're setup:
+Você vai precisar do [Ruby & Jekyll](https://jekyllrb.com/docs/installation/)
+para executar o site localmente. Uma vez configurado:
 
-* Clone the repository and go into the directory
-* Run `bundle install`
-* Run `jekyll serve`
-* Go to http://localhost:4000
+### clone o repositório
 
-## Making a Post
+```bash
+# sem ssh
+git clone https://github.com/qlrd/bitdevsinteriorrr.git
 
-To make a new post, make a new file in `_posts/` with a title of
-`YYYY-MM-DD-title-goes-here`. At the top of the file you'll want to provide the
-following information:
+# com ssh
+git clone git@github.com:qlrd/bitdevsinteriorrr.git
+```
+
+
+### Vá até o diretório
+
+```bash
+cd bitdevsinteriorrr
+```
+
+### Instale as dependências
+
+```bash
+bundle install
+```
+
+### Execute
+
+```bash
+jekyll serve
+```
+
+E abra `http://localhost:4000` no seu navegador.
+
+## Crie um post
+
+Para fazer um novo post, crie um novo arquivo em `_posts/` com o título na forma
+`YYYY-MM-DD-title-goes-here`. No cabeçalho deste arquivo você irá fornecer as
+seguintes informações:
 
 ```md
 ---
 layout: post # Always post
 type: socratic # or whitepaper for a whitepaper series
 title: "Name of the Post"
-meetup: https://www.meetup.com/BitDevsNYC/events/[event id here]/
+meetup: https://www.meetup.com/bitdevsinteriorrr/events/[event id here]/
 ---
 ```
 
-After that, it's just simple markdown. The site will auto-generate the rest.
+Depois disso, é um simples arquivo `markdown`. O site irá auto-gerar o resto.
 
-## Changing Site Data
+## Mudando configurações
 
-All site configurations are either contained in `_config.yml` or
-`_data/settings.yml`. Some data is duplicated between the two due to the way
-Jekyll injects variables, so be sure to update both.
+Todas as configurações estão ou contidas em `_config.yml` 
+`_data/settings.yml`. Alguns dados estão duplicados entre os dois de forma
+que o Jekyll injeta variáveis. Tenha certeza de fazer update em ambos.
 
-## Attributions
+## Atribuições
 
-Thanks to [LeNPaul](https://github.com/LeNPaul/jekyll-starter-kit) for the
-Jekyll starter kit this was forked from.
+Obrigado ao [LeNPaul](https://github.com/LeNPaul/jekyll-starter-kit) pelo kit
+de inicialização do Jekyll, do qual este foi forkado.
